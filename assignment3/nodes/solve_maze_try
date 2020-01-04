@@ -1,0 +1,67 @@
+# # -*- coding: utf-8 -*-
+
+# import rospy
+# import numpy as np
+# import math
+# import tf
+# from std_msgs.msg import String
+# from geometry_msgs.msg import PoseStamped, Pose
+# from move_base_msgs.msg import MoveBaseActionResult
+# import numpy as np
+# import time
+# import signal
+# import sys
+
+
+# class SolveMaze():
+#     def __init__(self):
+#         self.pub_goal_pose_stamped = rospy.Publisher("/move_base_simple/goal", PoseStamped, queue_size=1)
+
+#         self.graph = np.array([[0.0,0.0],[0.0,2.2],C,[-1.8,4.7],[1.5,2.2],[1.5,5.8],[3.1,5.8],[3.1,7.5],[-0.8,5.8],[-0.8,8]])#[x,y] all the nodes in the graph
+#         self.reachNext(self.graph[0])
+
+
+#     def reachNext(self,pos):
+#         print("haha")
+#         # goal_pos = Pose()
+#         # goal_pos.position.x = 0.0
+#         # goal_pos.position.y = 0.0
+#         # goal_pos.position.z = 0.0
+#         # goal_pos.orientation.w = 1.0
+#         # goal_pos.orientation.x = 0.0
+#         # goal_pos.orientation.y = 0.0
+#         # goal_pos.orientation.z = 0.0
+#         # goalPoseStamped = PoseStamped()
+#         # goalPoseStamped.header.frame_id = "map"
+#         # goalPoseStamped.header.stamp = 2600000
+#         # goalPoseStamped.pose = goal_pos
+#         # print("hoho")
+#         # self.pub_goal_pose_stamped.publish(goalPoseStamped)
+#         # print("hehe")
+#         goal_pos = Pose()
+# 	goal_pos.position.x = 1.0
+#         goal_pos.position.y = 1.1
+#         goal_pos.position.z = 0.0 
+# 	goal_pos.orientation.w = 1.0
+#         goal_pos.orientation.x = 0.0
+#         goal_pos.orientation.y = 0.0
+#         goal_pos.orientation.z = 1.0	
+# 	goalPoseStamped = PoseStamped()
+#         goalPoseStamped.header.frame_id = "map"
+#         goalPoseStamped.header.stamp = rospy.Time.now()
+#         goalPoseStamped.pose = goal_pos
+#         self.pub_goal_pose_stamped.publish(goalPoseStamped)
+#         print("hoho")
+    
+
+
+
+#     def main(self):
+#         rospy.spin()
+
+
+# if __name__ == '__main__':
+#     rospy.init_node('solve_maze')
+#     node = SolveMaze()
+
+#     node.main()
